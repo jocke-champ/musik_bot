@@ -14,7 +14,6 @@ bot.remove_command('help')
 
 #registrera klassen med boten
 bot.add_cog(main_cog(bot))
-bot.add_cog(image_cog(bot))
 bot.add_cog(music_cog(bot))
 
 #token
