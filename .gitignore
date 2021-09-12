@@ -1,0 +1,12 @@
+__pycache__
+downloads
+.vscode
+ffmpeg.exe
+
+notes.txt
+token.txt
+
+*.jpg
+*.jpeg
+*.png
+*.gif
