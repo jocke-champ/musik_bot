@@ -7,12 +7,12 @@ class main_cog(commands.Cog):
         self.help_message = """
 ```
 Allmänna kommandon:
-/hjälp - visar alla tillgängliga kommandon
+-h - visar alla tillgängliga kommandon
 
 Musikkommandon:
-/spela <nyckelord> - hittar låten på youtube och spelar den
-/kö - visar den aktuella musikköen
-/skippa - hoppar över den aktuella låten som spelas
+-p <nyckelord> - hittar låten på youtube och spelar den
+-k - visar den aktuella musikköen
+-s - hoppar över den aktuella låten som spelas
 ```
 """
         self.text_channel_list = []
@@ -26,7 +26,7 @@ Musikkommandon:
 
         await self.send_to_all(self.help_message)        
 
-    @commands.command(name="hjälp", help="Visar alla kommandon")
+    @commands.command(name="h", help="Visar alla kommandon")
     async def help(self, ctx):
         await ctx.send(self.help_message)
 
