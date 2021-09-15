@@ -63,7 +63,7 @@ class music_cog(commands.Cog):
         else:
             self.is_playing = False
 
-    @commands.command(name="spela", help="Spelar en låt från youtube")
+    @commands.command(name="p", help="Spelar en låt från youtube")
     async def p(self, ctx, *args):
         query = " ".join(args)
         
@@ -82,7 +82,7 @@ class music_cog(commands.Cog):
                 if self.is_playing == False:
                     await self.play_music()
 
-    @commands.command(name="kö", help="Visar sånger i kön")
+    @commands.command(name="k", help="Visar sånger i kön")
     async def q(self, ctx):
         retval = ""
         for i in range(0, len(self.music_queue)):
@@ -94,7 +94,7 @@ class music_cog(commands.Cog):
         else:
             await ctx.send("Ingen musik i kön :(")
 
-    @commands.command(name="skippa", help="Skippar låten som spelas")
+    @commands.command(name="s", help="Skippar låten som spelas")
     async def skip(self, ctx):
         if self.vc != "" and self.vc:
             self.vc.stop()
