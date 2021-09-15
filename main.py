@@ -7,7 +7,7 @@ import os
 from main_cog import main_cog
 from music_cog import music_cog
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='-')
 
 #ta bort standardhjälpkommandot så att vi kan skriva ut egna
 bot.remove_command('help')
